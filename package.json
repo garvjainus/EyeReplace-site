@@ -3,20 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3000",
     "lint": "next lint"
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "axios": "^1.7.7",
     "mongodb": "^6.9.0",
     "mongoose": "^8.7.0",
-    "next": "14.2.10",
+    "next": "^14.2.10",
     "next-auth": "^4.24.8",
+    "openai": "^4.65.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-wordcloud": "^1.2.7",
+    "react-responsive-carousel": "^3.2.23",
     "url": "^0.11.4",
     "wordcloud": "^1.2.2"
   },

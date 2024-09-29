@@ -13,8 +13,12 @@ const Nav = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
 
   const handleSignOut = () => {
-    signOut({ callbackUrl: '/' }); // Redirect to the homepage immediately after sign out
+    signOut({ callbackUrl: '/' }); // Redirect to the homepage after sign-out
+    // Clear localStorage/sessionStorage as an additional safeguard
+    localStorage.clear();
+    sessionStorage.clear();
   };
+  
 
   useEffect(() => {
     const setUpProviders = async () => {
@@ -127,10 +131,10 @@ const Nav = () => {
                 <button
                   type="button"
                   key={provider.name}
-                  onClick={() => signIn(provider.id)}
+                  onClick={() => signIn(provider.id, { prompt: 'select_account' })}
                   className="black_btn"
                 >
-                  Sign in
+                  Sign In
                 </button>
               ))}
           </>

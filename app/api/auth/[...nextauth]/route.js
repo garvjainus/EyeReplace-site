@@ -1,9 +1,9 @@
     import NextAuth from 'next-auth';
     import GoogleProvider from 'next-auth/providers/google';
 
-    import User from '/Users/garvjain/Downloads/eyereplace/models/user.js';
-    import { connectToDB } from '/Users/garvjain/Downloads/eyereplace/utils/database.js';
-
+    import User from '../../../../models/user.js';  // Use relative path
+    import { connectToDB } from '../../../../utils/database.js';  // Use relative path
+ 
     const handler = NextAuth({
     providers: [
         GoogleProvider({

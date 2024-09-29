@@ -1,5 +1,5 @@
-import { connectToDB } from '/Users/garvjain/Downloads/eyereplace/utils/database.js';
-import User from '/Users/garvjain/Downloads/eyereplace/models/user.js';
+import { connectToDB } from '../utils/database.js';
+import User from '../models/user.js';
 import { getSession } from 'next-auth/react';
 
 export default async function handler(req, res) {
